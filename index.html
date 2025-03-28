@@ -4,84 +4,103 @@
     <title>Mans datorikas portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Add W3.CSS styles -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body, h1, h2, h3 { font-family: "Lato", sans-serif; }
-        .bgimg { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
-        .bgimg-header { background-image: url('images/header.jpg'); min-height: 250px; }
-        .center-text { text-align: center; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #555;
+        }
+        ol {
+            padding: 0 20px;
+        }
+        p {
+            padding: 0 20px;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+        .header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
     </style>
 </head>
-<body class="w3-light-grey">
-
-<!-- Navbar -->
-<div class="w3-top">
-    <div class="w3-bar w3-black w3-card">
-        <a href="#home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-        <a href="#portfolio" class="w3-bar-item w3-button w3-padding-large">PORTFOLIO</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
-    </div>
-</div>
-
-<!-- Header Section -->
-<div class="bgimg bgimg-header w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle center-text w3-padding-64">
-        <h1 class="w3-xxlarge w3-text-white w3-wide">Mans datorikas portfolio</h1>
-    </div>
-</div>
-
-<!-- Main Content -->
-<div class="w3-content w3-padding-large">
-    <h2 class="center-text">Apgūtās tēmas</h2>
-    <ol>
-        <li>Rakstgrafika</li>
-        <li>Vektorgrafika</li>
-        <li>3D Modelēšana</li>
-        <li>Video veidošana</li>
-        <li>Ms Word</li>
-        <li>Ms Excel</li>
-    </ol>
-
-    <h3>Rakstgrafika</h3>
-    <p>Tēmu apgūvām Septembrī, pārbaudes darbā par to saņēmu 7 balles no 10</p>
-    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
-    <div class="w3-row-padding">
-        <img src="images/drawing.png" class="w3-image w3-hover-opacity" alt="Rakstgrafika Image 1">
-        <img src="images/bilde.png" class="w3-image w3-hover-opacity" alt="Rakstgrafika Image 2">
+<body>
+    <div class="header">
+        <h1>Mans datorikas portfolio</h1>
     </div>
 
-    <h3>Vektorgrafika</h3>
-    <p>Tēmu apgūvām Septembrī, pārbaudes darbā par to saņēmu 7 balles no 10</p>
-    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
-    <img src="images/Vards.png" class="w3-image w3-hover-opacity" alt="Vektorgrafika Image">
+    <div class="content">
+        <h2>Apgūtās tēmas</h2>
+        <ol>
+            <li>Rakstgrafika</li>
+            <li>Vektorgrafika</li>
+            <li>3D Modelēšana</li>
+            <li>Video veidošana</li>
+            <li>Ms Word</li>
+            <li>Ms Excel</li>
+        </ol>
 
-    <h3>3D Modelēšana</h3>
-    <p>Tēmu apgūvām Oktobrī, pārbaudes darbā par to saņēmu 9 balles no 10</p>
-    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
-    <div class="w3-row-padding">
-        <img src="images/bilde2.jpeg" class="w3-image w3-hover-opacity" alt="3D Modelēšana Image 1">
-        <img src="images/bildfe1.jpeg" class="w3-image w3-hover-opacity" alt="3D Modelēšana Image 2">
+        <h3>Rakstgrafika</h3>
+        <p>Tēmu apgūvām Septembrī, pārbaudes darbā par to saņēmu 7 balles no 10.</p>
+        <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+        <img src="images/drawing.png" alt="Rakstgrafika Example 1">
+        <img src="images/bilde.png" alt="Rakstgrafika Example 2">
+
+        <h3>Vektorgrafika</h3>
+        <p>Tēmu apgūvām Septembrī, pārbaudes darbā par to saņēmu 7 balles no 10.</p>
+        <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+        <img src="images/Vards.png" alt="Vektorgrafika Example">
+
+        <h3>3D Modelēšana</h3>
+        <p>Tēmu apgūvām Oktobrī, pārbaudes darbā par to saņēmu 9 balles no 10.</p>
+        <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+        <img src="images/bilde2.jpeg" alt="3D Modelēšana Example 1">
+        <img src="images/bildfe1.jpeg" alt="3D Modelēšana Example 2">
+
+        <h3>Video veidošana</h3>
+        <p>Tēmu apgūvām Decembrī, pārbaudes darbā par to saņēmu 10 balles no 10.</p>
+        <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+        <p>(No image provided)</p>
+
+        <h3>Ms Word</h3>
+        <p>Tēmu apgūvām Novembrī, pārbaudes darbā par to saņēmu 8 balles no 10.</p>
+        <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+        <p>(No image provided)</p>
+
+        <h3>Ms Excel</h3>
+        <p>Tēmu apgūvām Janvārī, pārbaudes darbā par to saņēmu 8 balles no 10.</p>
+        <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+        <img src="images/Screenshot (1).png" alt="Excel Example">
     </div>
 
-    <h3>Video veidošana</h3>
-    <p>Tēmu apgūvām Decembrī, pārbaudes darbā par to saņēmu 10 balles no 10</p>
-    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
-    <p>(No image provided)</p>
-
-    <h3>Ms Word</h3>
-    <p>Tēmu apgūvām Novembrī, pārbaudes darbā par to saņēmu 8 balles no 10</p>
-    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
-    <p>(No image provided)</p>
-
-    <h3>Ms Excel</h3>
-    <p>Tēmu apgūvām Janvārī, pārbaudes darbā par to saņēmu 8 balles no 10</p>
-    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
-    <img src="images/Screenshot (1).png" class="w3-image w3-hover-opacity" alt="Excel Screenshot">
-</div>
-
+    <div class="footer">
+        <p>© 2025 Mans datorikas portfolio</p>
+    </div>
 </body>
 </html>
-
