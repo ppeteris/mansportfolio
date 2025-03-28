@@ -11,7 +11,6 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-            line-height: 1.6;
         }
         h1, h2, h3 {
             text-align: center;
@@ -29,16 +28,33 @@
             font-size: 1.5em;
             margin: 20px 0 10px;
         }
-        ol {
+        .w3-bar {
+            background-color: #333;
+            overflow: hidden;
             text-align: center;
-            list-style: none;
-            padding: 0;
+            padding: 10px 0;
         }
-        ol li {
+        .w3-button {
+            color: white;
+            text-decoration: none;
             display: inline-block;
-            margin: 0 15px;
-            font-size: 1.2em;
-            color: #555;
+            padding: 10px 20px;
+            background-color: #444;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .w3-button:hover {
+            background-color: #555;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         p {
             text-align: justify;
@@ -53,22 +69,7 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .content {
-            background: #fff;
-            padding: 20px;
-            margin: 20px auto;
-            width: 90%;
-            max-width: 800px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .footer {
+        footer {
             background: #333;
             color: #fff;
             text-align: center;
@@ -78,56 +79,59 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Mans datorikas portfolio</h1>
-    </div>
 
-    <div class="content">
-        <h2>Apgūtās tēmas</h2>
-        <ol>
-            <li>Rakstgrafika</li>
-            <li>Vektorgrafika</li>
-            <li>3D Modelēšana</li>
-            <li>Video veidošana</li>
-            <li>Ms Word</li>
-            <li>Ms Excel</li>
-        </ol>
+<!-- Navigation Bar -->
+<div class="w3-bar">
+    <a href="#rakstgrafika" class="w3-button">Rakstgrafika</a>
+    <a href="#vektorgrafika" class="w3-button">Vektorgrafika</a>
+    <a href="#3d-modelesana" class="w3-button">3D Modelēšana</a>
+    <a href="#video-veidosana" class="w3-button">Video veidošana</a>
+    <a href="#ms-word" class="w3-button">Ms Word</a>
+    <a href="#ms-excel" class="w3-button">Ms Excel</a>
+</div>
 
-        <h3>Rakstgrafika</h3>
-        <p>Tēmu apgūvām Septembrī, pārbaudes darbā par to saņēmu 7 balles no 10.</p>
-        <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
-        <img src="images/drawing.png" alt="Rakstgrafika Example 1">
-        <img src="images/bilde.png" alt="Rakstgrafika Example 2">
+<!-- Content -->
+<div class="content">
+    <h1>Mans datorikas portfolio</h1>
+    <h2>Apgūtās tēmas</h2>
 
-        <h3>Vektorgrafika</h3>
-        <p>Tēmu apgūvām Septembrī, pārbaudes darbā par to saņēmu 7 balles no 10.</p>
-        <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
-        <img src="images/Vards.png" alt="Vektorgrafika Example">
+    <h3 id="rakstgrafika">Rakstgrafika</h3>
+    <p>Tēmu apgūvām Septembrī, pārbaudes darbā par to saņēmu 7 balles no 10.</p>
+    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+    <img src="images/drawing.png" alt="Rakstgrafika Example 1">
+    <img src="images/bilde.png" alt="Rakstgrafika Example 2">
 
-        <h3>3D Modelēšana</h3>
-        <p>Tēmu apgūvām Oktobrī, pārbaudes darbā par to saņēmu 9 balles no 10.</p>
-        <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
-        <img src="images/bilde2.jpeg" alt="3D Modelēšana Example 1">
-        <img src="images/bildfe1.jpeg" alt="3D Modelēšana Example 2">
+    <h3 id="vektorgrafika">Vektorgrafika</h3>
+    <p>Tēmu apgūvām Septembrī, pārbaudes darbā par to saņēmu 7 balles no 10.</p>
+    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+    <img src="images/Vards.png" alt="Vektorgrafika Example">
 
-        <h3>Video veidošana</h3>
-        <p>Tēmu apgūvām Decembrī, pārbaudes darbā par to saņēmu 10 balles no 10.</p>
-        <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
-        <p>(No image provided)</p>
+    <h3 id="3d-modelesana">3D Modelēšana</h3>
+    <p>Tēmu apgūvām Oktobrī, pārbaudes darbā par to saņēmu 9 balles no 10.</p>
+    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+    <img src="images/bilde2.jpeg" alt="3D Modelēšana Example 1">
+    <img src="images/bildfe1.jpeg" alt="3D Modelēšana Example 2">
 
-        <h3>Ms Word</h3>
-        <p>Tēmu apgūvām Novembrī, pārbaudes darbā par to saņēmu 8 balles no 10.</p>
-        <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
-        <p>(No image provided)</p>
+    <h3 id="video-veidosana">Video veidošana</h3>
+    <p>Tēmu apgūvām Decembrī, pārbaudes darbā par to saņēmu 10 balles no 10.</p>
+    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+    <p>(No image provided)</p>
 
-        <h3>Ms Excel</h3>
-        <p>Tēmu apgūvām Janvārī, pārbaudes darbā par to saņēmu 8 balles no 10.</p>
-        <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
-        <img src="images/Screenshot (1).png" alt="Excel Example">
-    </div>
+    <h3 id="ms-word">Ms Word</h3>
+    <p>Tēmu apgūvām Novembrī, pārbaudes darbā par to saņēmu 8 balles no 10.</p>
+    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+    <p>(No image provided)</p>
 
-    <div class="footer">
-        <p>© 2025 Mans datorikas portfolio</p>
-    </div>
+    <h3 id="ms-excel">Ms Excel</h3>
+    <p>Tēmu apgūvām Janvārī, pārbaudes darbā par to saņēmu 8 balles no 10.</p>
+    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+    <img src="images/Screenshot (1).png" alt="Excel Example">
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Mans datorikas portfolio</p>
+</footer>
+
 </body>
 </html>
