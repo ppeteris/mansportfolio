@@ -1,104 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
-<title>CSS Template</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-/* Container for flexboxes */
-section {
-  display: -webkit-flex;
-  display: flex;
-}
-
-/* Style the navigation menu */
-nav {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  background: #ccc;
-  padding: 20px;
-}
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-/* Style the content */
-article {
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-  background-color: #f1f1f1;
-  padding: 10px;
-}
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skola</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Header – fona krāsa un teksta stils */
+    header {
+      background-color: #666;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
+    
+    /* Galvenais saturs izmantojot flexbox */
+    section {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    /* Navigācijas sadaļa */
+    nav {
+      flex: 1;
+      padding: 20px;
+      /* Fona attēls – skolas bilde, pielāgojas joslai un atkārtojas */
+      background: url('skola.jpg') repeat;
+      background-size: 100% auto;
+    }
+    
+    nav h3 {
+      margin-top: 0;
+    }
+    
+    nav ol {
+      padding: 0;
+      margin: 0;
+      list-style-type: decimal;
+    }
+    
+    nav li {
+      margin-bottom: 10px;
+    }
+    
+    nav li a {
+      text-decoration: none;
+      color: #000;
+    }
+    
+    /* Artikuls ar saturu */
+    article {
+      flex: 3;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+    
+    article section {
+      margin-bottom: 20px;
+    }
+    
+    /* Tabula – strukturē datus par skolas vadītājiem */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    
+    table, th, td {
+      border: 1px solid #000;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    
+    /* Footer ar skolas logo kā saiti */
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+    
+    footer img {
+      max-height: 50px;
+      vertical-align: middle;
+    }
+    
+    /* Responsive – pielāgo izkārtojumu mazākiem ekrāniem */
+    @media (max-width: 600px) {
+      section {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Starp <body> un <header> netiek iekopots nekāds teksts -->
+  <header>
+    <h1>Rīgas Valsts 1. ģimnāzija</h1>
+  </header>
 
-<h2>CSS Layout Flexbox</h2>
-<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
-<p>Resize the browser window to see the responsive effect.</p>
-
-<header>
-  <h2>Cities</h2>
-</header>
-
-<section>
-  <nav>
-    <ul>
-      <li><a href="#">London</a></li>
-      <li><a href="#">Paris</a></li>
-      <li><a href="#">Tokyo</a></li>
-    </ul>
-  </nav>
+  <section>
+    <nav>
+      <h3>Satura rādītājs</h3>
+      <ol>
+        <li><a href="#vesture">Vēsture</a></li>
+        <li><a href="#skolas-nosaukumu-mainas">Skolas nosaukumu maiņas</a></li>
+        <li><a href="#vaditaji">Zināmie skolas vadītāji (1229—1804)</a></li>
+        <li><a href="#absolventi">Skolas absolventi</a></li>
+      </ol>
+    </nav>
+    
+    <article>
+      <!-- **Vēsture** nodaļa -->
+      <section id="vesture">
+        <h2>Vēsture</h2>
+        <p>
+          Rīgas Valsts 1. ģimnāzija (saīsinājumā RV1Ģ vai RV1.ģ) ir vispārējās pamata un vidējās izglītības iestāde Rīgā. Tā ir pilsētas senākā skola. Ģimnāzija specializējas matemātikas un valodu padziļinātā apgūšanā. Mācības notiek latviešu valodā, un kopš 1996. gada skola piedalās Starptautiskā bakalaurāta programmā.
+        </p>
+        <p>
+          Skolas pastāvēšanu var izsekot līdz pat 1211. gadam, kad Rīgā bīskaps Alberts nodibināja Svētās Marijas katedrāli un Livonijas bīskapijas domkapitula klosteri. Dokumentos tiek minēts arī, ka pirmais zināmais skolas vadītājs – domkapitula kanoniķis Heinrihs – bija saistīts ar Doma skolas tradīcijām.
+        </p>
+      </section>
+      
+      <!-- **Skolas nosaukumu maiņas** nodaļa -->
+      <section id="skolas-nosaukumu-mainas">
+        <h2>Skolas nosaukumu maiņas</h2>
+        <ol>
+          <li>1211.—1528. — Domkapitula klostera skola</li>
+          <li>1528.—1631. — Rīgas pilsētas Domskola</li>
+          <li>1631.—1710. — Rīgas Akadēmiskā ģimnāzija</li>
+          <li>1711.—1804. — Rīgas Domskola (klasiskā ģimnāzija)</li>
+          <li>1804.—1860. — Rīgas 1. apriņķa skola</li>
+          <li>1861.—1873. — Rīgas Reālģimnāzija</li>
+          <li>1873.—1894. — Rīgas Pilsētas ģimnāzija ar reālskolas un ģimnāzijas klasēm</li>
+          <li>1894.—1895. — 8 klašu klasiskā ģimnāzija</li>
+          <li>1896.—1919. — Valsts ģimnāzija</li>
+          <li>1919.—1920. — 1. vidusskola</li>
+          <li>1920.—1940. — Rīgas pilsētas 1. ģimnāzija</li>
+          <li>1940.—1944. — Rīgas 1. vidusskola</li>
+          <li>1944.—1990. — Ar Darba Sarkanā Karoga ordeni apbalvotā Rīgas L. Paegles 1. vidusskola</li>
+          <li>1990.—1996. — Rīgas 1. ģimnāzija</li>
+          <li>1996.—pašlaik — Rīgas Valsts 1. ģimnāzija</li>
+        </ol>
+      </section>
+      
+      <!-- **Zināmie skolas vadītāji (1229—1804)** nodaļa -->
+      <section id="vaditaji">
+        <h2>Zināmie skolas vadītāji (1229—1804)</h2>
+        <table>
+          <tr>
+            <th>Laiks</th>
+            <th>Vadzītājs</th>
+          </tr>
+          <tr>
+            <td>ap 1239.</td>
+            <td>mācību pārzinis (scholasticus) Domkapitula kanoniķis Heinrihs</td>
+          </tr>
+          <tr>
+            <td>1528.—1538.</td>
+            <td>rektors Jakobs Batuss (Jacobus Battus, miris 1546)</td>
+          </tr>
+          <tr>
+            <td>no 1538.</td>
+            <td>rektors Retgers Pistorijs (Bekers)</td>
+          </tr>
+          <tr>
+            <td>1554.—1561.</td>
+            <td>rektors Hermanis Vilkens (Vilikinds, Vitekinds)</td>
+          </tr>
+          <tr>
+            <td>ap 1576.</td>
+            <td>rektors Georgs Marsovs</td>
+          </tr>
+          <tr>
+            <td>1579.—1589.</td>
+            <td>rektors Heinrihs Mellers</td>
+          </tr>
+          <tr>
+            <td>1589.—1596.</td>
+            <td>rektors un inspektors Johans Rīvijs</td>
+          </tr>
+          <tr>
+            <td>no 1631.</td>
+            <td>ģimnāzijas inspektors Hermanis Samsons</td>
+          </tr>
+          <tr>
+            <td>no 1669.</td>
+            <td>rektors Georgs Lauterbahs</td>
+          </tr>
+          <tr>
+            <td>no 1681.</td>
+            <td>rektors Mihaels Pinsderfers (Pinsdörffer)</td>
+          </tr>
+          <tr>
+            <td>1755.—1765.</td>
+            <td>rektors un inspektors Johans Gothelfs Lindners</td>
+          </tr>
+          <tr>
+            <td>1765.—1780.</td>
+            <td>rektors Gotlībs Šlēgels</td>
+          </tr>
+          <tr>
+            <td>1780.—1787.</td>
+            <td>rektors Karls Filips Mihaels Snells</td>
+          </tr>
+          <tr>
+            <td>no 1788.</td>
+            <td>rektors Kārlis Gotlobs Zontāgs</td>
+          </tr>
+          <tr>
+            <td>līdz 1804.</td>
+            <td>rektors Johans Augusts Albanuss</td>
+          </tr>
+        </table>
+      </section>
+      
+      <!-- **Skolas absolventi** nodaļa -->
+      <section id="absolventi">
+        <h2>Skolas absolventi</h2>
+        <p>
+          Skolas absolvents Rainis ir viens no izcilākajiem Latvijas literatūras pārstāvjiem. Viņa darbi ir neatņemama mūsdienu kultūras sastāvdaļa. Uzzināt vairāk par Raini var, apmeklējot 
+          <a href="https://www.rainis.lv" target="_blank">šeit</a>.
+        </p>
+      </section>
+    </article>
+  </section>
   
-  <article>
-    <h1>London</h1>
-    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-  </article>
-</section>
-
-<footer>
-  <p>Footer</p>
-</footer>
-
+  <footer>
+    <a href="http://www.rv1.lv">
+      <img src="skola.jpg" alt="Skolas logo">
+    </a>
+    <p>&copy; 2025 Rīgas Valsts 1. ģimnāzija</p>
+  </footer>
 </body>
 </html>
+
 
