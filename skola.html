@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="lv">
+<html lang="en">
 <head>
+  <title>CSS Template</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Skola</title>
   <style>
     * {
       box-sizing: border-box;
@@ -11,11 +11,9 @@
     
     body {
       font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
     }
     
-    /* Header – fona krāsa un teksta stils */
+    /* Style the header */
     header {
       background-color: #666;
       padding: 30px;
@@ -24,68 +22,38 @@
       color: white;
     }
     
-    /* Galvenais saturs izmantojot flexbox */
+    /* Container for flexboxes */
     section {
+      display: -webkit-flex;
       display: flex;
-      flex-wrap: wrap;
     }
     
-    /* Navigācijas sadaļa */
+    /* Style the navigation menu (papildināts: navigācijas fona attēls) */
     nav {
+      -webkit-flex: 1;
+      -ms-flex: 1;
       flex: 1;
-      padding: 20px;
-      /* Fona attēls – skolas bilde, pielāgojas joslai un atkārtojas */
       background: url('skola.jpg') repeat;
       background-size: 100% auto;
-    }
-    
-    nav h3 {
-      margin-top: 0;
-    }
-    
-    nav ol {
-      padding: 0;
-      margin: 0;
-      list-style-type: decimal;
-    }
-    
-    nav li {
-      margin-bottom: 10px;
-    }
-    
-    nav li a {
-      text-decoration: none;
-      color: #000;
-    }
-    
-    /* Artikuls ar saturu */
-    article {
-      flex: 3;
-      background-color: #f1f1f1;
       padding: 20px;
     }
     
-    article section {
-      margin-bottom: 20px;
+    /* Style the list inside the menu */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
     }
     
-    /* Tabula – strukturē datus par skolas vadītājiem */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
+    /* Style the content */
+    article {
+      -webkit-flex: 3;
+      -ms-flex: 3;
+      flex: 3;
+      background-color: #f1f1f1;
+      padding: 10px;
     }
     
-    table, th, td {
-      border: 1px solid #000;
-    }
-    
-    th, td {
-      padding: 8px;
-      text-align: left;
-    }
-    
-    /* Footer ar skolas logo kā saiti */
+    /* Style the footer */
     footer {
       background-color: #777;
       padding: 10px;
@@ -93,50 +61,46 @@
       color: white;
     }
     
-    footer img {
-      max-height: 50px;
-      vertical-align: middle;
-    }
-    
-    /* Responsive – pielāgo izkārtojumu mazākiem ekrāniem */
+    /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
     @media (max-width: 600px) {
       section {
+        -webkit-flex-direction: column;
         flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Starp <body> un <header> netiek iekopots nekāds teksts -->
+  <!-- Teksts starp <body> un <header> ir dzēsts -->
   <header>
-    <h1>Rīgas Valsts 1. ģimnāzija</h1>
+    <h2>Rīgas Valsts 1. ģimnāzija</h2>
   </header>
-
+  
   <section>
     <nav>
       <h3>Satura rādītājs</h3>
       <ol>
         <li><a href="#vesture">Vēsture</a></li>
-        <li><a href="#skolas-nosaukumu-mainas">Skolas nosaukumu maiņas</a></li>
+        <li><a href="#skolas-mainas">Skolas nosaukumu maiņas</a></li>
         <li><a href="#vaditaji">Zināmie skolas vadītāji (1229—1804)</a></li>
         <li><a href="#absolventi">Skolas absolventi</a></li>
       </ol>
     </nav>
     
     <article>
-      <!-- **Vēsture** nodaļa -->
+      <!-- Vēsture sadaļa -->
       <section id="vesture">
         <h2>Vēsture</h2>
         <p>
-          Rīgas Valsts 1. ģimnāzija (saīsinājumā RV1Ģ vai RV1.ģ) ir vispārējās pamata un vidējās izglītības iestāde Rīgā. Tā ir pilsētas senākā skola. Ģimnāzija specializējas matemātikas un valodu padziļinātā apgūšanā. Mācības notiek latviešu valodā, un kopš 1996. gada skola piedalās Starptautiskā bakalaurāta programmā.
+          Rīgas Valsts 1. ģimnāzija (RV1Ģ vai RV1.ģ) ir Rīgas senākā skola, kas sniedz vispārējo pamata un vidējo izglītību. Skola specializējas matemātikas un valodu padziļinātā apgūšanā, un mācības tiek nodrošinātas latviešu valodā.
         </p>
         <p>
-          Skolas pastāvēšanu var izsekot līdz pat 1211. gadam, kad Rīgā bīskaps Alberts nodibināja Svētās Marijas katedrāli un Livonijas bīskapijas domkapitula klosteri. Dokumentos tiek minēts arī, ka pirmais zināmais skolas vadītājs – domkapitula kanoniķis Heinrihs – bija saistīts ar Doma skolas tradīcijām.
+          Kopš 1996. gada ģimnāzija piedalās Starptautiskā bakalaurāta programmā, un tajā ir dibināta absolventu un draugu biedrība, lai nodrošinātu finansiālu atbalstu. Skolā darbojas arī jauniešu koris "Kamēr..." un tiek organizēti matemātikas konkursi starp skolēniem.
         </p>
       </section>
       
-      <!-- **Skolas nosaukumu maiņas** nodaļa -->
-      <section id="skolas-nosaukumu-mainas">
+      <!-- Skolas nosaukumu maiņas sadaļa -->
+      <section id="skolas-mainas">
         <h2>Skolas nosaukumu maiņas</h2>
         <ol>
           <li>1211.—1528. — Domkapitula klostera skola</li>
@@ -157,13 +121,13 @@
         </ol>
       </section>
       
-      <!-- **Zināmie skolas vadītāji (1229—1804)** nodaļa -->
+      <!-- Zināmie skolas vadītāji sadaļa -->
       <section id="vaditaji">
         <h2>Zināmie skolas vadītāji (1229—1804)</h2>
         <table>
           <tr>
             <th>Laiks</th>
-            <th>Vadzītājs</th>
+            <th>Vadītājs</th>
           </tr>
           <tr>
             <td>ap 1239.</td>
@@ -228,12 +192,12 @@
         </table>
       </section>
       
-      <!-- **Skolas absolventi** nodaļa -->
+      <!-- Skolas absolventi sadaļa -->
       <section id="absolventi">
         <h2>Skolas absolventi</h2>
         <p>
-          Skolas absolvents Rainis ir viens no izcilākajiem Latvijas literatūras pārstāvjiem. Viņa darbi ir neatņemama mūsdienu kultūras sastāvdaļa. Uzzināt vairāk par Raini var, apmeklējot 
-          <a href="https://www.rainis.lv" target="_blank">šeit</a>.
+          Skolas absolvents Rainis ir viens no izcilākajiem Latvijas literatūras pārstāvjiem. Lai uzzinātu vairāk par viņa dzīvi un darbiem, apmeklē 
+          <a href="https://www.rainisliterature.com" target="_blank">šeit</a>.
         </p>
       </section>
     </article>
@@ -247,5 +211,3 @@
   </footer>
 </body>
 </html>
-
-
