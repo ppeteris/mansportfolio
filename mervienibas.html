@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <title>Informācijas daudzuma mērvienības</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Fona attēls – izmantojam attēlu "cipari.jpg" no attēlu mapes */
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/cipari.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        /* Konteinera noformējums */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: rgb(220, 220, 0); /* formas fona krāsa */
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 20px; /* formas teksta izmērs */
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            margin: 15px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            font-size: 20px;
+            padding: 5px;
+            width: calc(100% - 12px);
+            margin-bottom: 10px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Virsraksts -->
+        <h1>Informācijas daudzuma mērvienības</h1>
+        
+        <!-- Forma -->
+        <form id="convertForm">
+            <!-- Rindkopa 1: Gigabaiti (GB) -->
+            <p>
+                <label for="gb">Gigabaiti (GB):</label>
+                <input type="text" id="gb" name="gb">
+            </p>
+            <!-- Rindkopa 2: Megabaiti (MB) -->
+            <p>
+                <label for="mb">Megabaiti (MB):</label>
+                <input type="text" id="mb" name="mb">
+            </p>
+            <!-- Rindkopa 3: Mebibaiti (MiB) -->
+            <p>
+                <label for="mib">Mebibaiti (MiB):</label>
+                <input type="text" id="mib" name="mib">
+            </p>
+            <!-- Pogas -->
+            <div class="buttons">
+                <button type="button" onclick="convertUnits()">Konvertēt</button>
+                <button type="button" onclick="resetForm()">Notīrīt</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+      function convertUnits() {
+          // Iegūst vērtības no ievades laukiem
+          var gb = document.getElementById("gb").value.trim();
+          var mb = document.getElementById("mb").value.trim();
+          var mib = document.getElementById("mib").value.trim();
+          
+          // Noteik, cik laukos ir ievadīti dati.
+          var count = 0;
+          if(gb !== "") count++;
+          if(mb !== "") count++;
+          if(mib !== "") count++;
+          
+          if(count !== 1) {
+              alert("Lūdzu, ievadiet datus tikai vienā laukā, lai varētu izpildīt konverziju!");
+              return;
+          }
+          
+          // Konversijas koeficienti (aptuvens aprēķins):
+          // 1 GB = 1000 MB, 1 MB ≈ 0.953674 MiB, tātad 1 GB ≈ 953.674 MiB.
+          if(gb !== "") {
+              var gbVal = parseFloat(gb);
+              if(isNaN(gbVal)) { alert("Nederīga vērtība GB!"); return; }
+              document.getElementById("mb").value = gbVal * 1000;
+              document.getElementById("mib").value = gbVal * 953.674;
+          } else if(mb !== "") {
+              var mbVal = parseFloat(mb);
+              if(isNaN(mbVal)) { alert("Nederīga vērtība MB!"); return; }
+              document.getElementById("gb").value = mbVal / 1000;
+              document.getElementById("mib").value = mbVal * 0.953674;
+          } else if(mib !== "") {
+              var mibVal = parseFloat(mib);
+              if(isNaN(mibVal)) { alert("Nederīga vērtība MiB!"); return; }
+              document.getElementById("mb").value = mibVal / 0.953674;
+              document.getElementById("gb").value = (mibVal / 0.953674) / 1000;
+          }
+      }
+
+      function resetForm() {
+          document.getElementById("gb").value = "";
+          document.getElementById("mb").value = "";
+          document.getElementById("mib").value = "";
+      }
+    </script>
+</body>
+</html>
 
