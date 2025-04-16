@@ -8,30 +8,18 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
         /* Vispārējais dizains */
-        body, h1, h2, h3, h4, h5, h6 {
+        body, h1, h2, h3, p {
             font-family: "Segoe UI", Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Pilns ekrāna augstums */
+        /* Wrapper struktūrai */
         .wrapper {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-        }
-
-        /* Galvenais saturs */
-        .content {
-            flex: 1;
-            background: #fff;
-            padding: 40px;
-            margin: 20px auto;
-            width: 90%;
-            max-width: 900px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         }
 
         /* Navigācija */
@@ -54,6 +42,48 @@
             background-color: #444;
         }
 
+        /* Bulta uz index.html kreisajā pusē */
+        .back-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 20px;
+        }
+
+        .back-container img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .back-container a {
+            font-size: 1.2em;
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* Galvenais saturs */
+        .content {
+            flex: 1;
+            background: #fff;
+            padding: 40px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        /* Footer vienmēr apakšā */
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
         /* Video noformējums */
         .video-container {
             text-align: center;
@@ -66,32 +96,17 @@
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
         }
-
-        /* Footer – vienmēr mājaslapas apakšā */
-        footer {
-            background: #000;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: auto;
-        }
-
-        /* Attēli */
-        img {
-            display: block;
-            margin: 10px auto;
-            width: 300px;
-            height: auto;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
 
 <div class="wrapper">
-    <!-- Navigācija -->
-    <div class="custom-nav">
-        <a href="index.html">Atpakaļ uz sākumlapu</a>
+    <!-- Bulta uz index.html kreisajā pusē -->
+    <div class="back-container">
+        <a href="index.html">
+            <img src="images/arrow.png" alt="Atgriezties uz sākumlapu">
+        </a>
+        <a href="index.html">Atgriezties uz sākumlapu</a>
     </div>
 
     <!-- Saturs -->
@@ -103,6 +118,7 @@
             <p>Kā savu individuālo tēmu es izvēlējos drošas paroles veidošanu. Darba pareizas izpildes centienos internetā meklēju informāciju par drošas paroles veidošanu, kuru iekļāvu sevis veidotajā animācijā par tēmu. Animāciju veidoju PowerPoint.</p>
         </section>
         
+        <section>
             <h2>Izveidotā animācija</h2>
             <div class="video-container">
                 <video controls>
@@ -119,7 +135,7 @@
         </section>
     </div>
 
-    <!-- Footer – atrodas lapas apakšā -->
+    <!-- Footer -->
     <footer>
         <p>© 2025 Individuālā tēma</p>
     </footer>
