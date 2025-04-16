@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaidot dzimšanas dienu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaidot dzimšanas dienu..</title>
 </head>
-  <body>
-
-
-
-
-
-
-  </body>
-</html> 
+<body>
+  <h1>Gaidot dzimšanas dienu..</h1>
+  <hr>
+  <form>
+    <p>ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena</p>
+    <p>gads: <input type="text" name="gads" id="gads"></p>
+    <p>mēnesis: <input type="text" name="mēnesis" id="mēnesis"></p>
+    <p>diena: <input type="text" name="datums" id="datums"></p>
+    <p><input type="button" name="poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" onclick="dienas();"></p>
+    <p>Līdz svētkiem atlikušas</p>
+    <p><input type="text" name="dienas" id="dienas"></p>
+    <p>dienas : ) )</p>
+  </form>
+  <script>
+    function dienas() {
+      var gads = parseInt(document.getElementById("gads").value);
+      var menesis = parseInt(document.getElementById("mēnesis").value);
+      var diena = parseInt(document.getElementById("datums").value);
+      if (isNaN(gads) || isNaN(menesis) || isNaN(diena)) {
+        alert("Lūdzu, ievadi skaitliskas vērtības visos laukos!");
+        return;
+      }
+      var targetDate = new Date(gads, menesis - 1, diena);
+      var today = new Date();
+      if (targetDate < today) {
+        targetDate = new Date(gads + 1, menesis - 1, diena);
+      }
+      var diffMs = targetDate - today;
+      var diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+      document.getElementById("dienas").value = diffDays;
+    }
+  </script>
+</body>
+</html>
