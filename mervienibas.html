@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informācijas daudzuma mērvienības</title>
     <script>
-        // Konvertē no GB uz MB
         function convertToMB() {
             let gb = parseFloat(document.getElementById("gbInput").value);
             if (isNaN(gb)) {
@@ -15,8 +14,6 @@
             document.getElementById("mbOutput").value = gb * 1000;
             document.getElementById("mibOutput").value = "";
         }
-
-        // Konvertē no GB uz MiB
         function convertToMiB() {
             let gb = parseFloat(document.getElementById("gbInput").value);
             if (isNaN(gb)) {
@@ -26,8 +23,6 @@
             document.getElementById("mibOutput").value = gb * 953.674;
             document.getElementById("mbOutput").value = "";
         }
-
-        // Notīra visus laukus
         function resetFields() {
             document.getElementById("gbInput").value = "";
             document.getElementById("mbOutput").value = "";
@@ -35,7 +30,6 @@
         }
     </script>
     <style>
-        /* Fona attēls – “cipari.jpg” no attēlu mapes */
         body {
             background-image: url('images/cipari.jpg');
             background-repeat: repeat;
