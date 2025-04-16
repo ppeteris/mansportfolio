@@ -3,7 +3,9 @@
 <head>
     <title>Mans datorikas portfolio</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- W3.CSS bibliotēka -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,61 +23,28 @@
             color: white;
             font-size: 3em;
             font-weight: bold;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        /* Virsrakstu stilizācija */
-        h1 {
-            font-size: 3em;
-            font-weight: bold;
-            color: #222;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 2em;
-            font-weight: bold;
-            color: #333;
-            border-bottom: 2px solid #444;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        h3 {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #444;
-            margin-top: 20px;
-            text-align: center;
         }
 
         /* Navigācijas josla */
         .w3-bar {
             background-color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px 0;
+            text-align: center;
+            padding: 10px;
         }
 
-        .w3-button {
+        .w3-bar a {
             text-decoration: none;
-            display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 20px;
             color: white;
-            background-color: #555;
-            border-radius: 5px;
-            margin: 5px;
-            transition: background-color 0.3s ease;
+            display: inline-block;
+            font-size: 1.1em;
         }
 
-        .w3-button:hover {
-            background-color: #666;
+        .w3-bar a:hover {
+            background-color: #444;
         }
 
-        /* Navigācijas bulta */
+        /* Bulta uz otrais.html */
         .arrow-button img {
             width: 40px;
             height: auto;
@@ -91,6 +60,31 @@
             max-width: 800px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        /* Virsrakstu stilizācija */
+        h1 {
+            font-size: 2.8em;
+            font-weight: bold;
+            color: #222;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            border-bottom: 2px solid #444;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #444;
+            margin-top: 20px;
         }
 
         /* Attēlu stilizācija */
@@ -103,13 +97,12 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Footer vienmēr paliek apakšā */
+        /* Footer vienmēr lapas apakšā */
         footer {
             background: #333;
-            color: #fff;
+            color: white;
             text-align: center;
             padding: 10px;
-            font-size: 0.9em;
             position: relative;
             bottom: 0;
             width: 100%;
@@ -122,17 +115,17 @@
 <div class="header">Mans datorikas portfolio</div>
 
 <!-- Navigācijas josla -->
-<div class="w3-bar">
-    <a href="index.html" class="w3-button">Sākums</a>
-    <a href="otrais.html" class="w3-button arrow-button">
+<div class="w3-bar w3-black">
+    <a href="index.html">Sākums</a>
+    <a href="otrais.html" class="arrow-button">
         <img src="images/arrow.png" alt="Individuālā tēma">
     </a>
-    <a href="#rakstgrafika" class="w3-button">Rakstgrafika</a>
-    <a href="#vektorgrafika" class="w3-button">Vektorgrafika</a>
-    <a href="#3d-modelesana" class="w3-button">3D Modelēšana</a>
-    <a href="#video-veidosana" class="w3-button">Video veidošana</a>
-    <a href="#ms-word" class="w3-button">Ms Word</a>
-    <a href="#ms-excel" class="w3-button">Ms Excel</a>
+    <a href="#rakstgrafika">Rakstgrafika</a>
+    <a href="#vektorgrafika">Vektorgrafika</a>
+    <a href="#3d-modelesana">3D Modelēšana</a>
+    <a href="#video-veidosana">Video veidošana</a>
+    <a href="#ms-word">Ms Word</a>
+    <a href="#ms-excel">Ms Excel</a>
 </div>
 
 <!-- Saturs -->
@@ -141,7 +134,7 @@
 
     <h3 id="rakstgrafika">Rakstgrafika</h3>
     <p>Tēmu apgūvām Septembrī, pārbaudes darbā par to saņēmu 7 balles no 10.</p>
-    <img src="images/drawing.png" alt="Rakstgrafika Example 1">
+    <img src="images/drawing.png" alt="Rakstgrafika Example">
 
     <h3 id="vektorgrafika">Vektorgrafika</h3>
     <p>Tēmu apgūvām Septembrī, pārbaudes darbā par to saņēmu 7 balles no 10.</p>
@@ -149,7 +142,7 @@
 
     <h3 id="3d-modelesana">3D Modelēšana</h3>
     <p>Tēmu apgūvām Oktobrī, pārbaudes darbā par to saņēmu 9 balles no 10.</p>
-    <img src="images/bilde2.jpeg" alt="3D Modelēšana Example 1">
+    <img src="images/bilde2.jpeg" alt="3D Modelēšana Example">
 
     <h3 id="video-veidosana">Video veidošana</h3>
     <p>Tēmu apgūvām Decembrī, pārbaudes darbā par to saņēmu 10 balles no 10.</p>
@@ -167,6 +160,18 @@
 <footer>
     <p>© 2025 Mans datorikas portfolio</p>
 </footer>
+
+<!-- JavaScript sadaļu atvēršanai/slēpšanai -->
+<script>
+    function toggleSection(id) {
+        var section = document.getElementById(id);
+        if (section.style.display === "none") {
+            section.style.display = "block";
+        } else {
+            section.style.display = "none";
+        }
+    }
+</script>
 
 </body>
 </html>
