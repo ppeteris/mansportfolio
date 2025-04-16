@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
-  <title>CSS Template</title>
+  <title>Rīgas Valsts 1. ģimnāzija</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
@@ -11,9 +11,11 @@
     
     body {
       font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
     }
     
-    /* Style the header */
+    /* Header – satur tikai skolas nosaukumu */
     header {
       background-color: #666;
       padding: 30px;
@@ -22,38 +24,75 @@
       color: white;
     }
     
-    /* Container for flexboxes */
+    /* Flexbox konteiners */
     section {
-      display: -webkit-flex;
       display: flex;
     }
     
-    /* Style the navigation menu (papildināts: navigācijas fona attēls) */
+    /* Navigācija */
     nav {
-      -webkit-flex: 1;
-      -ms-flex: 1;
       flex: 1;
       background: url('skola.jpg') repeat;
       background-size: 100% auto;
       padding: 20px;
     }
     
-    /* Style the list inside the menu */
-    nav ul {
-      list-style-type: none;
-      padding: 0;
+    /* Navigācijas saturam */
+    nav h3 {
+      margin-top: 0;
+      color: white;
     }
     
-    /* Style the content */
+    nav ol {
+      list-style-type: decimal;
+      padding-left: 20px;
+      color: white;
+    }
+    
+    nav ol li {
+      margin: 10px 0;
+    }
+    
+    nav ol li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    
+    /* Saturs */
     article {
-      -webkit-flex: 3;
-      -ms-flex: 3;
       flex: 3;
       background-color: #f1f1f1;
       padding: 10px;
     }
     
-    /* Style the footer */
+    /* Strukturējamās daļas stilizācija */
+    article section {
+      margin-bottom: 30px;
+    }
+    
+    article h2 {
+      border-bottom: 2px solid #444;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    
+    article table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    article table, article th, article td {
+      border: 1px solid #000;
+      padding: 5px;
+      text-align: left;
+    }
+    
+    article ol {
+      margin-left: 20px;
+    }
+    
+    /* Footer */
     footer {
       background-color: #777;
       padding: 10px;
@@ -61,17 +100,21 @@
       color: white;
     }
     
-    /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+    footer a img {
+      width: 100px;
+      height: auto;
+    }
+    
+    /* Responsive layout */
     @media (max-width: 600px) {
       section {
-        -webkit-flex-direction: column;
         flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Teksts starp <body> un <header> ir dzēsts -->
+  
   <header>
     <h2>Rīgas Valsts 1. ģimnāzija</h2>
   </header>
@@ -95,7 +138,7 @@
           Rīgas Valsts 1. ģimnāzija (RV1Ģ vai RV1.ģ) ir Rīgas senākā skola, kas sniedz vispārējo pamata un vidējo izglītību. Skola specializējas matemātikas un valodu padziļinātā apgūšanā, un mācības tiek nodrošinātas latviešu valodā.
         </p>
         <p>
-          Kopš 1996. gada ģimnāzija piedalās Starptautiskā bakalaurāta programmā, un tajā ir dibināta absolventu un draugu biedrība, lai nodrošinātu finansiālu atbalstu. Skolā darbojas arī jauniešu koris "Kamēr..." un tiek organizēti matemātikas konkursi starp skolēniem.
+          Kopš 1996. gada ģimnāzija piedalās Starptautiskā bakalaurāta programmā, un tajā ir dibināta absolventu un draugu biedrība, kas nodrošina finansiālu atbalstu. Skolā darbojas arī jauniešu koris "Kamēr..." un tiek organizēti matemātikas konkursi.
         </p>
       </section>
       
@@ -131,63 +174,63 @@
           </tr>
           <tr>
             <td>ap 1239.</td>
-            <td>mācību pārzinis (scholasticus) Domkapitula kanoniķis Heinrihs</td>
+            <td>Mācību pārzinis un Domkapitula kanoniķis Heinrihs</td>
           </tr>
           <tr>
             <td>1528.—1538.</td>
-            <td>rektors Jakobs Batuss (Jacobus Battus, miris 1546)</td>
+            <td>Rektors Jakobs Batuss (Jacobus Battus, miris 1546)</td>
           </tr>
           <tr>
             <td>no 1538.</td>
-            <td>rektors Retgers Pistorijs (Bekers)</td>
+            <td>Rektors Retgers Pistorijs (Bekers)</td>
           </tr>
           <tr>
             <td>1554.—1561.</td>
-            <td>rektors Hermanis Vilkens (Vilikinds, Vitekinds)</td>
+            <td>Rektors Hermanis Vilkens (Vilikinds, Vitekinds)</td>
           </tr>
           <tr>
             <td>ap 1576.</td>
-            <td>rektors Georgs Marsovs</td>
+            <td>Rektors Georgs Marsovs</td>
           </tr>
           <tr>
             <td>1579.—1589.</td>
-            <td>rektors Heinrihs Mellers</td>
+            <td>Rektors Heinrihs Mellers</td>
           </tr>
           <tr>
             <td>1589.—1596.</td>
-            <td>rektors un inspektors Johans Rīvijs</td>
+            <td>Rektors un inspektors Johans Rīvijs</td>
           </tr>
           <tr>
             <td>no 1631.</td>
-            <td>ģimnāzijas inspektors Hermanis Samsons</td>
+            <td>Ģimnāzijas inspektors Hermanis Samsons</td>
           </tr>
           <tr>
             <td>no 1669.</td>
-            <td>rektors Georgs Lauterbahs</td>
+            <td>Rektors Georgs Lauterbahs</td>
           </tr>
           <tr>
             <td>no 1681.</td>
-            <td>rektors Mihaels Pinsderfers (Pinsdörffer)</td>
+            <td>Rektors Mihaels Pinsderfers (Pinsdörffer)</td>
           </tr>
           <tr>
             <td>1755.—1765.</td>
-            <td>rektors un inspektors Johans Gothelfs Lindners</td>
+            <td>Rektors un inspektors Johans Gothelfs Lindners</td>
           </tr>
           <tr>
             <td>1765.—1780.</td>
-            <td>rektors Gotlībs Šlēgels</td>
+            <td>Rektors Gotlībs Šlēgels</td>
           </tr>
           <tr>
             <td>1780.—1787.</td>
-            <td>rektors Karls Filips Mihaels Snells</td>
+            <td>Rektors Karls Filips Mihaels Snells</td>
           </tr>
           <tr>
             <td>no 1788.</td>
-            <td>rektors Kārlis Gotlobs Zontāgs</td>
+            <td>Rektors Kārlis Gotlobs Zontāgs</td>
           </tr>
           <tr>
             <td>līdz 1804.</td>
-            <td>rektors Johans Augusts Albanuss</td>
+            <td>Rektors Johans Augusts Albanuss</td>
           </tr>
         </table>
       </section>
