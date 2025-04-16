@@ -1,211 +1,137 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>W3.CSS Template</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-
-
- @media (max-width: 1200px) {
-  body::before,
-  body::after {
-    display: none; 
-  }
-
-    iframe {
-      height: 300px; 
-    }
-
-    h1 {
-      font-size: 2em; 
-    }
-  }
-    h3{
-      color:red;
-    }
-    .w3-text-container {
-      display: none;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .w3-text-container.show {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .w3-main {
-      margin-left: 60px;
-      margin-right: 60px;
-    }
-
-    .w3-container {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-    body, h1, h2, h3, h4, h5, h6 {
-      font-family: "Raleway", sans-serif;
-    }
-
-    body {
-      position: relative;
-      padding: 0;
-      margin: 0;
-      background-color: #f0f0f0;
-    }
-
-    
-    @keyframes spin {
-      0% {
-        background-position: 0 0;
-      }
-      100% {
-        background-position: 0 80px; 
-      }
-    }
-
-    body::before,
-    body::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 50px;
-      background: repeating-linear-gradient(
-        -45deg,
-        #007bff,
-        #007bff 10px,
-        #ffffff 10px,
-        #ffffff 20px
-      );
-      animation: spin 5s linear infinite; 
-    }
-
-    body::before {
-      left: 0;
-    }
-
-    body::after {
-      right: 0;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      text-align: center;
-      margin-bottom: 30px;
-      padding: 15px;
-      color: #ffffff;
-      background: #007bff;
-      border-radius: 10px;
-    }
-
-    .w3-container img {
-      border: 5px solid transparent;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .w3-container img:hover {
-      transform: scale(1.05);
-      border-color: #007bff;
-    }
-  </style>
-  <script>
-    function toggleText(image) {
-      let textContainer = image.nextElementSibling;
-      if (textContainer && textContainer.classList.contains("w3-container")) {
-        if (textContainer.classList.contains("show")) {
-          textContainer.classList.remove("show");
-          setTimeout(() => { textContainer.style.display = "none"; }, 300);
-        } else {
-          textContainer.style.display = "block";
-          setTimeout(() => { textContainer.classList.add("show"); }, 10);
+    <title>Mans datorikas portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
-      }
-    }
-  </script>
+        h1, h2, h3 {
+            text-align: center;
+            color: #444;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin: 20px 0 10px;
+        }
+        .w3-bar {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .w3-button {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #444;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .w3-button:hover {
+            background-color: #555;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            text-align: justify;
+            padding: 0 20px;
+            font-size: 1em;
+        }
+        img {
+            display: block;
+            margin: 10px auto;
+            width: 300px; /* Reduced image size */
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
-<body class="w3-light-grey">
-  <div class="w3-main">
-    <header id="portfolio">
-      <div class="w3-container">
-        <h1><b>Mans Portfolio - Roberts Rems Ruža</b></h1>
-        <div class="w3-container" style="text-align: center;">
-  <a href="#photo1" class="w3-button w3-blue w3-margin">Word/Video</a>
-  <a href="#photo2" class="w3-button w3-blue w3-margin">Excel/Inkscaped</a>
-  <a href="#photo3" class="w3-button w3-blue w3-margin">Gimp/TinkerCad</a>
-</div>
-      </div>
-       <div class="w3-container">
-         <a href="html2.html" style="text-decoration:none;">
-    <div style="text-align: center; font-size: 2em; color: blue;">&#8595;</div>
-  </a>
+<body>
 
-        <h3><b> Uzklikšķiniet uz foto, lai iegūtu zemtekstu. Visi kd ir atrodami uzspiežot zilo bultu un atrodami pogu veidā zem teksta otrajā.html(es negribēju izbojāt pirmo lapu).</b></h3>
-      </div>
-    </header>
-    <div class="w3-row-padding">
-      <div class="w3-half w3-container w3-margin-bottom">
-        <img id="photo1" src="images/Ekr%C4%81nuz%C5%86%C4%93mums%202025-02-21%20123149.png" alt="Norway" style="width:100%" class="w3-hover-opacity" onclick="toggleText(this)">
-        <div class="w3-container w3-white w3-text-container">
-          <p><b>Word</b></p>
-          <p>Šeit es pildu uzdotos datorikas uzdevumus Microsoft word programmā par tā funkcijām.</p>
-        </div>
-      </div>
-      <div class="w3-half w3-container w3-margin-bottom">
-        <div class="w3-container">
-          <iframe width="100%" height="700" src="https://www.youtube.com/embed/Z6FPcSsL0W4" 
-          title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen></iframe>
-        </div>
-    
-        <div class="w3-container w3-white">
-          <p><b>Dizaina video klips</b></p>
-          <p>Redzams video klips ko es uztaisīju video rediģēšanas programmā CapCut, par mūsu TinkerCad biznesa 3D modeļa veidošanu, modelēšanu, plānošanu un izstrādāšānas procesu.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-row-padding">
-      <div class="w3-half w3-container w3-margin-bottom">
-        <img id="photo2" src="images/Ekr%C4%81nuz%C5%86%C4%93mums%202025-02-28%20115958.png" alt="Norway" style="width:100%" class="w3-hover-opacity" onclick="toggleText(this)">
-        <div class="w3-container w3-white w3-text-container">
-          <p><b>Excel pārbaudes darbs</b></p>
-          <p>Var redzēt Microsoft Excel programmā veidoto un izpildes laikā pildīto skolotājas stundā doto zināšanu pārbaudes domu izaicinājumu testu un smadzeņu mīklu</p>
-        </div>
-      </div>
-      <div class="w3-half w3-container w3-margin-bottom">
-        <img src="images/Ekr%C4%81nuz%C5%86%C4%93mums%202025-03-15%20163239.png" alt="Norway" style="width:100%" class="w3-hover-opacity" onclick="toggleText(this)">
-        <div class="w3-container w3-white w3-text-container">
-          <p><b>Dizaina veidošana Inkscape programmā</b></p>
-          <p>Ir ieraugāms mūsu finalizētais dizaina projekts, kas tika izmantots kā rasējuma pamats mūsu Tinkercad 3D dizaina modelēšanai un printēšanai</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-row-padding">
-      <div class="w3-half w3-container w3-margin-bottom">
-        <img id="photo3" src="images/Ekr%C4%81nuz%C5%86%C4%93mums%202025-02-28%20120303.png" alt="Norway" style="width:100%" class="w3-hover-opacity" onclick="toggleText(this)">
-        <div class="w3-container w3-white w3-text-container">
-          <p><b>Gimp programmā attēlotais bildes sagriezums</b></p>
-          <p>Spējams pamanīt Gimp programmā veidoto projektu, kas bija dots kā izaicinājums stundu laikā par vēlamu un nozīmīgu vērtējumu, kas tika novērtēts desmit baļļu sistēmā</p>
-        </div>
-      </div>
-      <div class="w3-half w3-container w3-margin-bottom">
-        <img src="images/Ekr%C4%81nuz%C5%86%C4%93mums%202025-03-15%20164254.png" alt="Norway" style="width:100%" class="w3-hover-opacity" onclick="toggleText(this)">
-        <div class="w3-container w3-white w3-text-container">
-          <p><b>Tinkercad modelēšanas process</b></p>
-          <p>Pagodinājums aplūkot Tinkercad procesā iesākto cilindru, kas vēlāk pārtapa par mūsu pilnībā paveikto 3D modeli</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a href="https://onedrive.live.com/view.aspx?resid=D03969CC9682A3B6!36932&cid=d03969cc9682a3b6&authkey=!AMLHuz27Dxfp1cc&CT=1742550046945&OR=ItemsView"> uz prezentāciju</a>
+<!-- Navigation Bar -->
+<div class="w3-bar">
+    <a href="#rakstgrafika" class="w3-button">Rakstgrafika</a>
+    <a href="#vektorgrafika" class="w3-button">Vektorgrafika</a>
+    <a href="#3d-modelesana" class="w3-button">3D Modelēšana</a>
+    <a href="#video-veidosana" class="w3-button">Video veidošana</a>
+    <a href="#ms-word" class="w3-button">Ms Word</a>
+    <a href="#ms-excel" class="w3-button">Ms Excel</a>
+</div>
+
+<!-- Content -->
+<div class="content">
+    <h1>Mans datorikas portfolio</h1>
+    <h2>Apgūtās tēmas</h2>
+
+    <h3 id="rakstgrafika">Rakstgrafika</h3>
+    <p>Tēmu apgūvām Septembrī, pārbaudes darbā par to saņēmu 7 balles no 10.</p>
+    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+    <img src="images/drawing.png" alt="Rakstgrafika Example 1">
+    <img src="images/bilde.png" alt="Rakstgrafika Example 2">
+
+    <h3 id="vektorgrafika">Vektorgrafika</h3>
+    <p>Tēmu apgūvām Septembrī, pārbaudes darbā par to saņēmu 7 balles no 10.</p>
+    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+    <img src="images/Vards.png" alt="Vektorgrafika Example">
+
+    <h3 id="3d-modelesana">3D Modelēšana</h3>
+    <p>Tēmu apgūvām Oktobrī, pārbaudes darbā par to saņēmu 9 balles no 10.</p>
+    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+    <img src="images/bilde2.jpeg" alt="3D Modelēšana Example 1">
+    <img src="images/bildfe1.jpeg" alt="3D Modelēšana Example 2">
+
+    <h3 id="video-veidosana">Video veidošana</h3>
+    <p>Tēmu apgūvām Decembrī, pārbaudes darbā par to saņēmu 10 balles no 10.</p>
+    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+    <p>(No image provided)</p>
+
+    <h3 id="ms-word">Ms Word</h3>
+    <p>Tēmu apgūvām Novembrī, pārbaudes darbā par to saņēmu 8 balles no 10.</p>
+    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+    <img src="images/wordscreenshto.png" alt="Word Example">
+
+    <h3 id="ms-excel">Ms Excel</h3>
+    <p>Tēmu apgūvām Janvārī, pārbaudes darbā par to saņēmu 8 balles no 10.</p>
+    <p>Darbi, kurus izpildīju tēmas apgūšanas laikā:</p>
+    <img src="images/Screenshot (1).png" alt="Excel Example">
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Mans datorikas portfolio</p>
+</footer>
+
 </body>
 </html>
