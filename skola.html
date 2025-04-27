@@ -13,8 +13,8 @@
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
-    
 
     header {
       background-color: #666;
@@ -24,19 +24,23 @@
       color: white;
     }
     
-   
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
     section {
       display: flex;
+      justify-content: center;
     }
     
     nav {
       flex: 1;
       background: url('skolabild1.jpg') repeat;
-      background-size: 100% auto;
+      background-size: cover;
       padding: 20px;
     }
-    
-    /* Navigācijas saturam */
+
     nav h3 {
       margin-top: 0;
       color: white;
@@ -58,18 +62,17 @@
       font-weight: bold;
     }
     
-    
     article {
       flex: 3;
       background-color: #f1f1f1;
-      padding: 10px;
+      padding: 20px;
+      text-align: left;
     }
-    
- 
+
     article section {
       margin-bottom: 30px;
     }
-    
+
     article h2 {
       border-bottom: 2px solid #444;
       padding-bottom: 5px;
@@ -81,17 +84,16 @@
       width: 100%;
     }
     
-    article table, article th, article td {
+    article th, article td {
       border: 1px solid #000;
       padding: 5px;
       text-align: left;
     }
-    
+
     article ol {
       margin-left: 20px;
     }
-    
-    /* Footer */
+
     footer {
       background-color: #777;
       padding: 10px;
@@ -99,11 +101,10 @@
       color: white;
     }
     
-    footer a img {
+    footer img {
       width: 100px;
       height: auto;
     }
-    
 
     @media (max-width: 600px) {
       section {
@@ -113,11 +114,12 @@
   </style>
 </head>
 <body>
-  
-  <header>
-    <h2>Rīgas Valsts 1. ģimnāzija</h2>
-  </header>
-  
+
+<header>
+  <h2>Rīgas Valsts 1. ģimnāzija</h2>
+</header>
+
+<div class="container">
   <section>
     <nav>
       <h3>Satura rādītājs</h3>
@@ -128,19 +130,12 @@
         <li><a href="#absolventi">Skolas absolventi</a></li>
       </ol>
     </nav>
-    
+
     <article>
-    
       <section id="vesture">
         <h2>Vēsture</h2>
-        <p>
-          Rīgas Valsts 1. ģimnāzija (RV1Ģ vai RV1.ģ) ir Rīgas senākā skola, kas sniedz vispārējo pamata un vidējo izglītību. Skola specializējas matemātikas un valodu padziļinātā apgūšanā, un mācības tiek nodrošinātas latviešu valodā.
-        </p>
-        <p>
-          Kopš 1996. gada ģimnāzija piedalās Starptautiskā bakalaurāta programmā, un tajā ir dibināta absolventu un draugu biedrība, kas nodrošina finansiālu atbalstu. Skolā darbojas arī jauniešu koris "Kamēr..." un tiek organizēti matemātikas konkursi.
-        </p>
+        <p>Rīgas Valsts 1. ģimnāzija ir senākā Rīgas skola, kas piedāvā padziļinātu izglītību matemātikā un valodās.</p>
       </section>
-      
 
       <section id="izmainas">
         <h2>Skolas nosaukumu maiņas</h2>
@@ -148,22 +143,10 @@
           <li>1211.—1528. — Domkapitula klostera skola</li>
           <li>1528.—1631. — Rīgas pilsētas Domskola</li>
           <li>1631.—1710. — Rīgas Akadēmiskā ģimnāzija</li>
-          <li>1711.—1804. — Rīgas Domskola (klasiskā ģimnāzija)</li>
-          <li>1804.—1860. — Rīgas 1. apriņķa skola</li>
-          <li>1861.—1873. — Rīgas Reālģimnāzija</li>
-          <li>1873.—1894. — Rīgas Pilsētas ģimnāzija ar reālskolas un ģimnāzijas klasēm</li>
-          <li>1894.—1895. — 8 klašu klasiskā ģimnāzija</li>
-          <li>1896.—1919. — Valsts ģimnāzija</li>
-          <li>1919.—1920. — 1. vidusskola</li>
-          <li>1920.—1940. — Rīgas pilsētas 1. ģimnāzija</li>
-          <li>1940.—1944. — Rīgas 1. vidusskola</li>
-          <li>1944.—1990. — Ar Darba Sarkanā Karoga ordeni apbalvotā Rīgas L. Paegles 1. vidusskola</li>
-          <li>1990.—1996. — Rīgas 1. ģimnāzija</li>
-          <li>1996.—pašlaik — Rīgas Valsts 1. ģimnāzija</li>
+          <li>1711.—1804. — Rīgas Domskola</li>
         </ol>
       </section>
-      
- 
+
       <section id="vaditaji">
         <h2>Zināmie skolas vadītāji (1229—1804)</h2>
         <table>
@@ -173,83 +156,29 @@
           </tr>
           <tr>
             <td>ap 1239.</td>
-            <td>Mācību pārzinis un Domkapitula kanoniķis Heinrihs</td>
+            <td>Mācību pārzinis Heinrihs</td>
           </tr>
           <tr>
             <td>1528.—1538.</td>
-            <td>Rektors Jakobs Batuss (Jacobus Battus, miris 1546)</td>
-          </tr>
-          <tr>
-            <td>no 1538.</td>
-            <td>Rektors Retgers Pistorijs (Bekers)</td>
-          </tr>
-          <tr>
-            <td>1554.—1561.</td>
-            <td>Rektors Hermanis Vilkens (Vilikinds, Vitekinds)</td>
-          </tr>
-          <tr>
-            <td>ap 1576.</td>
-            <td>Rektors Georgs Marsovs</td>
-          </tr>
-          <tr>
-            <td>1579.—1589.</td>
-            <td>Rektors Heinrihs Mellers</td>
-          </tr>
-          <tr>
-            <td>1589.—1596.</td>
-            <td>Rektors un inspektors Johans Rīvijs</td>
-          </tr>
-          <tr>
-            <td>no 1631.</td>
-            <td>Ģimnāzijas inspektors Hermanis Samsons</td>
-          </tr>
-          <tr>
-            <td>no 1669.</td>
-            <td>Rektors Georgs Lauterbahs</td>
-          </tr>
-          <tr>
-            <td>no 1681.</td>
-            <td>Rektors Mihaels Pinsderfers (Pinsdörffer)</td>
-          </tr>
-          <tr>
-            <td>1755.—1765.</td>
-            <td>Rektors un inspektors Johans Gothelfs Lindners</td>
-          </tr>
-          <tr>
-            <td>1765.—1780.</td>
-            <td>Rektors Gotlībs Šlēgels</td>
-          </tr>
-          <tr>
-            <td>1780.—1787.</td>
-            <td>Rektors Karls Filips Mihaels Snells</td>
-          </tr>
-          <tr>
-            <td>no 1788.</td>
-            <td>Rektors Kārlis Gotlobs Zontāgs</td>
-          </tr>
-          <tr>
-            <td>līdz 1804.</td>
-            <td>Rektors Johans Augusts Albanuss</td>
+            <td>Jakobs Batuss</td>
           </tr>
         </table>
       </section>
-      
-    
+
       <section id="absolventi">
         <h2>Skolas absolventi</h2>
-        <p>
-          Skolas absolvents Rainis ir viens no izcilākajiem Latvijas literatūras pārstāvjiem. Lai uzzinātu vairāk par viņa dzīvi un darbiem, apmeklē 
-          <a href="https://enciklopedija.lv/skirklis/55869-Rainis" target="_blank">šo mājaslapu</a>.
-        </p>
+        <p>Rainis ir viens no ievērojamākajiem Latvijas literatūras pārstāvjiem. <a href="https://enciklopedija.lv/skirklis/55869-Rainis" target="_blank">Vairāk par Raini</a>.</p>
       </section>
     </article>
   </section>
-  
-  <footer>
-    <a href="http://www.rv1.lv">
-      <img src="skolalogo1.jpg" alt="Skolas logo">
-    </a>
-    <p>&copy; 2025 Rīgas Valsts 1. ģimnāzija</p>
-  </footer>
+</div>
+
+<footer>
+  <a href="http://www.rv1.lv">
+    <img src="skolalogo1.jpg" alt="Skolas logo">
+  </a>
+  <p>&copy; 2025 Rīgas Valsts 1. ģimnāzija</p>
+</footer>
+
 </body>
 </html>
